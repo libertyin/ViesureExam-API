@@ -1,0 +1,20 @@
+** Run tests**
+mvn test
+
+**Bugs**
+
+1. Incorrect tempInCelsius received when set tempInFahrenheit = 30 in /weather/temp
+actual: tempInCelsius = -2
+expected: tempInCelsius = -1
+2. Incorrect description received when set tempInFahrenheit = 50 in /weather/temp
+actual: description = The weather is cold
+expected: description = The weather is mild
+3. Incorrect description received when set tempInFahrenheit = 68 in /weather/temp
+actual: The weather is
+expected: The weather is warm
+4. Incorrect description received when set tempInFahrenheit = 75 in /weather/temp
+actual: The weather is
+expected: The weather is warm
+5. Incorrect icon received when set condition = 4 in /weather/condition
+actual: drizzle.jpeg
+expected: drizzle.png
